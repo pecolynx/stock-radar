@@ -5,14 +5,20 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from pyaml_env import parse_config
 from stock_radar_app.controller import healthcheck_controller
 
 debug_mode = os.getenv("DEBUG_MODE")
 
+config_text = ""
 if debug_mode:
-    config_text = ""
+    with open("stock_radar_app/config/config.yml", encoding="utf-8") as f:
+        config_text = f.read()
 else:
     config_text = importlib.resources.read_text("stock_radar_app.config", "config.yml")
+print("HELLO")
+
+config_text = parse_config(data=config_text)
 print(config_text)
 
 # config_file_path = os.getenv(

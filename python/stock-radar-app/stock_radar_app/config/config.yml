@@ -9,5 +9,5 @@ db:
 #  database: ${DB_NAME}
 
 logging:
-  level: ${LOG_LEVEL|INFO}
-  format: ${LOG_FORMAT|PLAIN}
+  level: !ENV ${LOG_LEVEL:INFO}
+  format: !ENV ${LOG_FORMAT:PLAIN}

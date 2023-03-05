@@ -1,6 +1,7 @@
-poetry_requirements(
-    name="poetry",
-)
+# poetry_requirements(
+#     name="poetry",
+#     source="empty.pyproject.toml",
+# )
 
 pex_binary(
     name="stock-radar-app",

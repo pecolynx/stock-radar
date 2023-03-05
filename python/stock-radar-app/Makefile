@@ -11,7 +11,7 @@ build-frontend:
 uvicorn:
 	CONFIG_FILE_PATH=stock_radar_app/config/config.yml \
 	DEBUG_MODE=1 \
-	$(CMD) uvicorn $(APP_NAME).main:app --reload
+	$(CMD) uvicorn $(APP_NAME).main:app --reload --log-config stock_radar_app/config/uvicorn-log.yml
 	# $(CMD) uvicorn $(APP_NAME).main:app --reload --log-config stock_radar_app/config/uvicorn-log.yml
 
 test:

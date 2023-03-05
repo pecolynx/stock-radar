@@ -2,5 +2,8 @@ python_sources(
     dependencies=[
         "python/stock-radar-app/stock_radar_app/config",
         "python/stock-radar-app/stock_radar_app/statics",
+        "python/3rdparty/fastapi_0.92.0:reqs",
+        "python/3rdparty/pyaml-env_1.2.1:reqs",
+        "python/3rdparty/uvicorn_0.20.0:reqs",
     ]
 )
