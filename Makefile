@@ -1,4 +1,8 @@
-PANTS=./pants
+PANTS:=pants
+STOCK_RADAR_APP_NAME:=stock_radar_app
+STOCK_RADAR_APP_IMAGE:=stock-radar-app
+
+SHELL=/bin/bash
 
 .PHONY: all
 all:
@@ -34,18 +38,32 @@ generate-lockfiles:
 package:
 	$(PANTS) package ::
 
-.PHONY: package-stock-radar-app
-package-s-radar-app:
-	$(PANTS) package stock-radar-app:
-
 .PHONY: update-build-files
 update-build-files:
 	$(PANTS) update-build-files ::
 
+#
+# stock-radar-frontend
+#
+build-stock-radar-frontend:
+	rm -rf python/${STOCK_RADAR_APP_IMAGE}/${STOCK_RADAR_APP_NAME}/statics/*
+	pushd typescript/stock-radar-frontend && npm run build && popd
+	cp -r typescript/stock-radar-frontend/dist/* python/${STOCK_RADAR_APP_IMAGE}/${STOCK_RADAR_APP_NAME}/statics/
+	cp python/${STOCK_RADAR_APP_IMAGE}/template/__init__.py.statics python/${STOCK_RADAR_APP_IMAGE}/${STOCK_RADAR_APP_NAME}/statics/__init__.py
+	cp python/${STOCK_RADAR_APP_IMAGE}/template/BUILD.statics python/${STOCK_RADAR_APP_IMAGE}/${STOCK_RADAR_APP_NAME}/statics/BUILD
+
+
+#
+# stock-radar-app
+#
+.PHONY: package-stock-radar-app
+package-stock-radar-app:
+	$(PANTS) package python/${STOCK_RADAR_APP_IMAGE}:
+
 .PHONY: run-stock-radar-app-binary
-run-s-radar-app-binary:
-	$(PANTS) run python/stock-radar-app:stock-radar-app
+run-stock-radar-app-binary:
+	$(PANTS) run python/${STOCK_RADAR_APP_IMAGE}:${STOCK_RADAR_APP_IMAGE}
 
 .PHONY: run-stock-radar-app
-run-s-radar-app:
-	$(PANTS) run python/stock-radar-app/stock_radar_app/main.py
+run-stock-radar-app:
+	$(PANTS) run python/${STOCK_RADAR_APP_IMAGE}/stock_radar_app/main.py

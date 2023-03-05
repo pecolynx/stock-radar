@@ -1,0 +1,5 @@
+exclude_dirs: ["tests"]
+skips: [
+  "B101", # assert_used
+  "B104", # hardcoded_bind_all_interfaces
+]
