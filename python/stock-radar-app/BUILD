@@ -1,6 +1,5 @@
 # poetry_requirements(
 #     name="poetry",
-#     source="empty.pyproject.toml",
 # )
 
 pex_binary(
