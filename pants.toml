@@ -1,0 +1,81 @@
+[GLOBAL]
+pants_version = "2.15.0"
+
+backend_packages = [
+  "pants.backend.build_files.fmt.black",
+  "pants.backend.codegen.protobuf.python",
+  "pants.backend.docker",
+  "pants.backend.docker.lint.hadolint",
+  "pants.backend.python",
+  "pants.backend.python.lint.bandit",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.docformatter",
+  "pants.backend.python.lint.flake8",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.pylint",
+  "pants.backend.python.typecheck.mypy",
+]
+
+[python]
+interpreter_constraints = [">=3.9,<3.10"]
+
+# https://www.pantsbuild.org/docs/source-roots
+[source]
+root_patterns = [
+  "/python/*",
+]
+
+[anonymous-telemetry]
+enabled = false
+
+[docker]
+build_args = ["GIT_COMMIT"]
+
+[test]
+use_coverage = true
+output = "all"
+
+[bandit]
+version = "bandit==1.7.4"
+config = "python/build-support/bandit.yaml"
+lockfile = "python/build-support/bandit_lockfile.txt"
+
+[black]
+version = "black==23.1.0"
+config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/black_lockfile.txt"
+
+[docformatter]
+version = "docformatter==1.5.1"
+# config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/docformatter_lockfile.txt"
+
+[flake8]
+version = "flake8==5.0.4"
+config = "python/build-support/flake8.config"
+lockfile = "python/build-support/flake8_lockfile.txt"
+
+[isort]
+version = "isort==5.9.3"
+config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/isort_lockfile.txt"
+
+[mypy]
+version = "mypy==0.961"
+config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/mypy_lockfile.txt"
+
+[mypy-protobuf]
+version = "mypy-protobuf==2.10"
+# config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/mypy_protobuf_lockfile.txt"
+
+[pylint]
+version = "pylint==2.13.0"
+config = "python/build-support/pylint.config"
+lockfile = "python/build-support/pylint_lockfile.txt"
+
+[pytest]
+version = "pytest==7.0.1"
+config = "python/build-support/pyproject.toml"
+lockfile = "python/build-support/pytest_lockfile.txt"
