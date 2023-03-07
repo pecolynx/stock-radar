@@ -11,9 +11,9 @@ pex_binary(
     restartable=True,
 )
 
-python_sources(
-    name="stock_radar_app",
-)
+# python_sources(
+#     name="stock_radar_app",
+# )
 
 docker_image(
     name="docker",
