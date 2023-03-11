@@ -68,7 +68,7 @@ def get_chart_data(
         list_entity = TraceDataListHTTPEntity(
             list=trace_data_http_entity_list,
         )
-        # print("response========================aa")
+        print("response========================aa")
         # print(list_entity)
         return list_entity
     # except WorkbookNotFoundError:

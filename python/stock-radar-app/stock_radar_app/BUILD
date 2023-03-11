@@ -27,7 +27,6 @@ python_requirement(
         # "starlette==0.25.0",
         # "typing_extensions==4.5.0",
     ],
-    resolve="web-app",
 )
 
 python_sources(

@@ -58,7 +58,6 @@ processor = BatchSpanProcessor(jaeger_exporter)
 provider.add_span_processor(processor)
 trace.set_tracer_provider(provider)
 
-
 # logging
 if config_dict["logging"]["format"] == "JSON":
     log.init_json_logger()

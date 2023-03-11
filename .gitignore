@@ -140,3 +140,4 @@ tmp/
 *.csv
 *.db
 *.sqlite3
+BUILD.md
