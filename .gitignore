@@ -137,7 +137,7 @@ dmypy.json
 tmp/
 
 
-*.csv
+# *.csv
 *.db
 *.sqlite3
 BUILD.md
