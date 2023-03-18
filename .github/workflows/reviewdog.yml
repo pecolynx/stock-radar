@@ -1,0 +1,55 @@
+---
+on: [pull_request]
+name: Reviewdog
+permissions:
+  pull-requests: write
+jobs:
+  python_1:
+    strategy:
+      matrix:
+        workdir:
+          - python/stock-radar-app
+    name: python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files-specific
+        uses: tj-actions/changed-files@v35
+        with:
+          files: |
+            ${{ matrix.workdir }}/**
+
+      - run: exit 0
+        if: steps.changed-files-specific.outputs.any_changed != 'true'
+
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: latest
+
+      - run: pip install black==23.1.0
+      - run: pip install pylint==2.13.0
+      - run: pip install poetry==1.4.0
+      - run: poetryn install
+        working-directory: ${{ matrix.workdir }}
+
+      - name: black
+        uses: reviewdog/action-black@v3
+        with:
+          black_args: "--config ../build-support/pyproject.toml"
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          tool_name: black
+          filter_mode: nofilter
+          fail_on_error: true
+          workdir: ${{ matrix.workdir }}
+
+      - name: pylint
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.github_token }}
+        run: |
+          poetry run pylint --rcfile=../build-support/pylint.config ./*
+        working-directory: ${{ matrix.workdir }}

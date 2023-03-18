@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "stock_radar_app"}]
 
 [tool.poetry.dependencies]
-python = "^3.9,<3.10"
+python = "^3.10,<3.11"
 fastapi = "0.92.0"
 uvicorn = "0.20.0"
 opentelemetry-exporter-jaeger = "1.16.0"
