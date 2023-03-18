@@ -8,6 +8,9 @@ def gen_macd(
     macd = (
         close.ewm(span=fast_ema_period).mean() - close.ewm(span=slow_ema_period).mean()
     )
+    macd = (
+        close.ewm(span=fast_ema_period).mean() - close.ewm(span=slow_ema_period).mean()
+    )
     signal = macd.rolling(signal_sma_period).mean()
     return macd, signal
 
