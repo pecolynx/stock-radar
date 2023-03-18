@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "stock_radar_app"}]
 
 [tool.poetry.dependencies]
-python = "^3.9,<3.10"
+python = "^3.10,<3.11"
 fastapi = "0.92.0"
 uvicorn = "0.20.0"
 opentelemetry-exporter-jaeger = "1.16.0"
@@ -21,6 +21,7 @@ pandas = "1.5.3"
 ta-lib = "0.4.25"
 pydantic = "1.10.5"
 pyaml-env = "^1.2.1"
+ruff = "^0.0.257"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "5.0.4"
@@ -30,6 +31,53 @@ isort = "5.9.3"
 pylint = "2.13.0"
 pytest = "7.0.1"
 mypy = "0.961"
+
+[tool.ruff]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["E", "F"]
+ignore = []
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 85
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.10.
+target-version = "py310"
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 1
+
 
 [build-system]
 requires = ["poetry-core"]

@@ -6,7 +6,7 @@
 // {
 //   "version": 3,
 //   "valid_for_interpreter_constraints": [
-//     "CPython<3.10,>=3.9"
+//     "CPython<3.11,>=3.10"
 //   ],
 //   "generated_with_requirements": [
 //     "GitPython==3.1.18",
@@ -126,13 +126,8 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "40527857252b61eacd1d9af500c3337ba8deb8fc298940291486c465c8b46ec0",
-              "url": "https://files.pythonhosted.org/packages/12/fc/a4d5a7554e0067677823f7265cb3ae22aed8a238560b5133b58cda252dad/PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
-            },
-            {
-              "algorithm": "sha256",
-              "hash": "d67d839ede4ed1b28a4e8909735fc992a923cdb84e618544973d7dfc71540803",
-              "url": "https://files.pythonhosted.org/packages/21/67/b42191239c5650c9e419c4a08a7a022bbf1abf55b0391c380a72c3af5462/PyYAML-6.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+              "hash": "f84fbc98b019fef2ee9a1cb3ce93e3187a6df0b2538a651bfb890254ba9f90b5",
+              "url": "https://files.pythonhosted.org/packages/02/25/6ba9f6bb50a3d4fbe22c1a02554dc670682a07c8701d1716d19ddea2c940/PyYAML-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
             },
             {
               "algorithm": "sha256",
@@ -141,18 +136,23 @@
             },
             {
               "algorithm": "sha256",
-              "hash": "e61ceaab6f49fb8bdfaa0f92c4b57bcfbea54c09277b1b4f7ac376bfb7a7c174",
-              "url": "https://files.pythonhosted.org/packages/67/d4/b95266228a25ef5bd70984c08b4efce2c035a4baa5ccafa827b266e3dc36/PyYAML-6.0-cp39-cp39-macosx_11_0_arm64.whl"
+              "hash": "d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53",
+              "url": "https://files.pythonhosted.org/packages/44/e5/4fea13230bcebf24b28c0efd774a2dd65a0937a2d39e94a4503438b078ed/PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "cba8c411ef271aa037d7357a2bc8f9ee8b58b9965831d9e51baf703280dc73d3",
-              "url": "https://files.pythonhosted.org/packages/77/da/e845437ffe0dffae4e7562faf23a4f264d886431c5d2a2816c853288dc8e/PyYAML-6.0-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl"
+              "hash": "77f396e6ef4c73fdc33a9157446466f1cff553d979bd00ecb64385760c6babdc",
+              "url": "https://files.pythonhosted.org/packages/5e/f4/7b4bb01873be78fc9fde307f38f62e380b7111862c165372cf094ca2b093/PyYAML-6.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "055d937d65826939cb044fc8c9b08889e8c743fdc6a32b33e2390f66013e449b",
-              "url": "https://files.pythonhosted.org/packages/f5/6f/b8b4515346af7c33d3b07cd8ca8ea0700ca72e8d7a750b2b87ac0268ca4e/PyYAML-6.0-cp39-cp39-macosx_10_9_x86_64.whl"
+              "hash": "9df7ed3b3d2e0ecfe09e14741b857df43adb5a3ddadc919a2d94fbdf78fea53c",
+              "url": "https://files.pythonhosted.org/packages/91/49/d46d7b15cddfa98533e89f3832f391aedf7e31f37b4d4df3a7a7855a7073/PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "a80a78046a72361de73f8f395f1f1e49f956c6be882eed58505a15f3e430962b",
+              "url": "https://files.pythonhosted.org/packages/ef/ad/b443cce94539e57e1a745a845f95c100ad7b97593d7e104051e43f730ecd/PyYAML-6.0-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl"
             }
           ],
           "project_name": "pyyaml",
@@ -164,13 +164,13 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "f106dee1b506dee5102cc3f3e9e68137bbad6d47b616be7991714b0c62204251",
-              "url": "https://files.pythonhosted.org/packages/2c/3a/e0340041dad00234d1fe569ed55b602d24eb11a4939b0a2ec844e970a87d/setuptools-67.4.0-py3-none-any.whl"
+              "hash": "b78aaa36f6b90a074c1fa651168723acbf45d14cb1196b6f02c0fd07f17623b2",
+              "url": "https://files.pythonhosted.org/packages/c3/9e/8a7ba2c9984a060daa6c6f9fff4d576b7ace3936239d6b771541eab972ed/setuptools-67.6.0-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "e5fd0a713141a4a105412233c63dc4e17ba0090c8e8334594ac790ec97792330",
-              "url": "https://files.pythonhosted.org/packages/fe/31/2c88d37d4f8036c6648745e74ec51f73a6ba945a06e069601900f81fe00a/setuptools-67.4.0.tar.gz"
+              "hash": "2ee892cd5f29f3373097f5a814697e397cf3ce313616df0af11231e2ad118077",
+              "url": "https://files.pythonhosted.org/packages/25/f3/d68c20919bc774c6cb127f1762f2f2f999d700a58198556e883dd3700e58/setuptools-67.6.0.tar.gz"
             }
           ],
           "project_name": "setuptools",
@@ -222,7 +222,7 @@
             "wheel; extra == \"testing-integration\""
           ],
           "requires_python": ">=3.7",
-          "version": "67.4.0"
+          "version": "67.6.0"
         },
         {
           "artifacts": [
@@ -276,7 +276,7 @@
     "setuptools"
   ],
   "requires_python": [
-    "<3.10,>=3.9"
+    "<3.11,>=3.10"
   ],
   "resolver_version": "pip-2020-resolver",
   "style": "universal",

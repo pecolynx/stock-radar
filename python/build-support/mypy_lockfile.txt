@@ -6,7 +6,7 @@
 // {
 //   "version": 3,
 //   "valid_for_interpreter_constraints": [
-//     "CPython<3.10,>=3.9"
+//     "CPython<3.11,>=3.10"
 //   ],
 //   "generated_with_requirements": [
 //     "mypy==0.961"
@@ -36,13 +36,8 @@
             },
             {
               "algorithm": "sha256",
-              "hash": "5f1332964963d4832a94bebc10f13d3279be3ce8f6c64da563d6ee6e2eeda932",
-              "url": "https://files.pythonhosted.org/packages/31/73/71ae84ece879f7c6fd5fbbe7c750c4663dcbd53fa5c7fa7023be59af27f5/mypy-0.961-cp39-cp39-macosx_10_9_universal2.whl"
-            },
-            {
-              "algorithm": "sha256",
-              "hash": "006be38474216b833eca29ff6b73e143386f352e10e9c2fbe76aa8549e5554f5",
-              "url": "https://files.pythonhosted.org/packages/5e/5a/1b46c161aacdff572632695a483e64ea908089b5c1b6bb92c7e59685c889/mypy-0.961-cp39-cp39-macosx_10_9_x86_64.whl"
+              "hash": "b117650592e1782819829605a193360a08aa99f1fc23d1d71e1a75a142dc7e15",
+              "url": "https://files.pythonhosted.org/packages/46/d7/3cf7605655f78daded7a23e66f632b50a3b3a8b4262739782f558f8949cf/mypy-0.961-cp310-cp310-macosx_10_9_x86_64.whl"
             },
             {
               "algorithm": "sha256",
@@ -51,13 +46,18 @@
             },
             {
               "algorithm": "sha256",
-              "hash": "a5ea0875a049de1b63b972456542f04643daf320d27dc592d7c3d9cd5d9bf950",
-              "url": "https://files.pythonhosted.org/packages/b4/5f/6f116003e4ddb472912c13f999127d658e56a210177e23c9d6b1538a5184/mypy-0.961-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+              "hash": "697540876638ce349b01b6786bc6094ccdaba88af446a9abb967293ce6eaa2b0",
+              "url": "https://files.pythonhosted.org/packages/86/df/16748348d0119a6f2528f370e20f644a15ffb8a335a79e91023babc34d0b/mypy-0.961-cp310-cp310-macosx_10_9_universal2.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "9940e6916ed9371809b35b2154baf1f684acba935cd09928952310fbddaba648",
-              "url": "https://files.pythonhosted.org/packages/e3/66/9942860fc360e529dbd695b1da3dd80336095d0d3c956e416eb656fba7dd/mypy-0.961-cp39-cp39-macosx_11_0_arm64.whl"
+              "hash": "3e09f1f983a71d0672bbc97ae33ee3709d10c779beb613febc36805a6e28bb4e",
+              "url": "https://files.pythonhosted.org/packages/9c/4b/37c32ab752c1a16cd528bfa239553207108ae33c7b617f9cfea3bb6e2f00/mypy-0.961-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "bdd5ca340beffb8c44cb9dc26697628d1b88c6bddf5c2f6eb308c46f269bb6f3",
+              "url": "https://files.pythonhosted.org/packages/ba/85/d59bd3b0c84a59d862d2494a3461710ad4a2a1616312414ecc95b2393310/mypy-0.961-cp310-cp310-macosx_11_0_arm64.whl"
             }
           ],
           "project_name": "mypy",
@@ -139,7 +139,7 @@
     "mypy==0.961"
   ],
   "requires_python": [
-    "<3.10,>=3.9"
+    "<3.11,>=3.10"
   ],
   "resolver_version": "pip-2020-resolver",
   "style": "universal",
