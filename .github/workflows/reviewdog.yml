@@ -33,7 +33,7 @@ jobs:
       - run: pip install black==23.1.0
       - run: pip install pylint==2.13.0
       - run: pip install poetry==1.4.0
-      - run: poetryn install
+      - run: poetry install
         working-directory: ${{ matrix.workdir }}
 
       - name: black
